@@ -1,0 +1,213 @@
+/* ============================================================
+   Global Stylesheet for Quick Jobs
+   Author: Your Name / Team
+   Description: Defines base layout, navbar, hero, content, footer,
+                responsive behavior, and UI component styles.
+============================================================ */
+
+/* ------------------------------
+   Base Global Reset & Typography
+------------------------------ */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* ------------------------------
+   Navbar Styles
+------------------------------ */
+.navbar {
+  background: #fff;
+  padding: 14px 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Branding (Logo) */
+.navbar-logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0073e6;
+  text-decoration: none;
+}
+
+/* Toggle Button (for mobile) */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Right-side nav items (links + logout) */
+.navbar-right {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Common nav link styling */
+.nav-item {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Logout link highlighted in red */
+.logout-link {
+  color: #e60000;
+  font-weight: bold;
+}
+
+/* ------------------------------
+   Services Dropdown Menu
+------------------------------ */
+.services-tab {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Hidden dropdown by default */
+.services-dropdown {
+  display: none;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 12px 0;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+/* Show dropdown on hover */
+.services-tab:hover .services-dropdown {
+  display: block;
+}
+
+/* Dropdown items */
+.services-dropdown a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.services-dropdown a:hover {
+  background: #f5f5f5;
+  color: #0073e6;
+}
+
+/* ------------------------------
+   Hero Section
+------------------------------ */
+.hero {
+  padding: 60px 32px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.hero a {
+  padding: 12px 24px;
+  background-color: #0073e6;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* ------------------------------
+   Content Section (Why Quick Jobs, etc.)
+------------------------------ */
+.section {
+  padding: 40px 32px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Features Grid */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+/* Individual Feature Card */
+.feature {
+  flex: 1 1 240px;
+  max-width: 300px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 40px;
+}
+
+/* ------------------------------
+   Responsive Behavior
+------------------------------ */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .navbar-right.show {
+    display: flex;
+  }
+
+  .services-dropdown {
+    position: static;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+}
